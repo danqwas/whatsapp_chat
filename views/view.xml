@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+    <data>
+        <record id="whatsapp_sale_order" model="ir.ui.view">
+            <field name="name">sale.order.form.inherated</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+             <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_quotation_send']" position="after">
+                        <button name="send_message_template" string="Whatsapp Message" type="object" class="oe_highlight"/>
+                </xpath>
+            </field>
+        </record> 
+        
+
+    </data>
+</openerp>
